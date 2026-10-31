@@ -1,1 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#fff0f5">
+<title>Happy Birthday ❤️</title>
 
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Georgia, serif;
+  text-align: center;
+  color: #67334b;
+  background: linear-gradient(135deg, #fff0f5, #ffe0ec, #fff8fb);
+}
+
+header {
+  padding: 65px 18px 35px;
+}
+
+h1 {
+  color: #c13f75;
+  font-size: clamp(38px, 9vw, 65px);
+  margin-bottom: 12px;
+}
+
+h1 span {
+  display: block;
+  font-size: 0.65em;
+  font-style: italic;
+  color: #e77da4;
+  margin-top: 12px;
+}
+
+p {
+  line-height: 1.8;
+}
+
+button {
+  border: none;
+  border-radius: 30px;
+  padding: 14px 24px;
+  background: #c13f75;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+section {
+  padding: 25px 16px;
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: normal;
+}
+
+.photos {
+  max-width: 900px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.photo-card {
+  background: white;
+  padding: 10px;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px #c13f7515;
+}
+
+.photo-card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 12px;
+  display: none;
+}
+
+.placeholder {
+  height: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff0f5;
+  border-radius: 12px;
+  color: #b65b80;
+  padding: 12px;
+}
+
+.photo-card label {
+  display: block;
+  padding: 13px 3px 5px;
+  cursor: pointer;
+  font: 13px Arial, sans-serif;
+}
+
+.photo-card input {
+  display: none;
+}
+
+.cake {
+  font-size: 110px;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  50% { transform: translateY(-10px); }
+}
+
+.quote {
+  max-width: 620px;
+  margin: 15px auto;
+  padding: 22px;
+  border: 1px solid #f4c8d9;
+  border-radius: 16px;
+  background: #ffffffb8;
+  font-size: 19px;
+  line-height: 1.7;
+  font-style: italic;
+}
+
+footer {
+  padding: 35px 15px;
+  color: #b65b80;
+}
+
+.heart {
+  animation: beat 1s infinite;
+  display: inline-block;
+}
+
+@keyframes beat {
+  50% { transform: scale(1.3); }
+}
+
+.fall {
+  position: fixed;
+  top: -30px;
+  z-index: 10;
+  pointer-events: none;
+  animation: falling linear forwards;
+}
+
+@keyframes falling {
+  to {
+    transform: translateY(110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .photos {
+    grid-template-columns: 1fr;
+  }
+
+  .photo-card {
+    max-width: 340px;
+    width: 100%;
+    margin: auto;
+  }
+
+  .photo-card img,
+  .placeholder {
+    height: 290px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <p>✦ A LITTLE SURPRISE MADE WITH LOVE ✦</p>
+
+  <h1>
+    Happy Birthday
+    <span>to someone special ♡</span>
+  </h1>
+
+  <p>
+    May your day be filled with beautiful moments,
+    endless smiles and all the love your heart deserves. ❤️
+  </p>
+
+  <button id="musicButton">♫ Play Sweet Melody</button>
+  <p id="musicStatus">Tap to play your birthday melody 🎶</p>
+</header>
+
+<section>
+  <h2>Little Memories ✨</h2>
+
+  <div class="photos">
+
+    <div class="photo-card">
+      <div class="placeholder">♡ Your favourite memory</div>
+      <img alt="Birthday memory one">
+      <label>
+        ＋ Choose Photo 1
+        <input type="file" accept="image/*">
+      </label>
+    </div>
+
+    <div class="photo-card">
+      <div class="placeholder">✿ A beautiful moment</div>
+      <img alt="Birthday memory two">
+      <label>
+        ＋ Choose Photo 2
+        <input type="file" accept="image/*">
+      </label>
+    </div>
+
+    <div class="photo-card">
+      <div class="placeholder">♡ One more memory</div>
+      <img alt="Birthday memory three">
+      <label>
+        ＋ Choose Photo 3
+        <input type="file" accept="image/*">
+      </label>
+    </div>
+
+  </div>
+
+  <p>Every picture holds a little piece of happiness. 💗</p>
+</section>
+
+<section>
+  <div class="cake">🎂</div>
+  <h2>Make a Wish 💫</h2>
+
+  <p>
+    May your dreams come closer,<br>
+    your worries become lighter,<br>
+    and your life become more beautiful every day.
+  </p>
+</section>
+
+<section>
+  <h2>A Few Words for You 💌</h2>
+
+  <div class="quote">
+    “You deserve all the beautiful things this world has to offer.” ❤️
+  </div>
+
+  <div class="quote">
+    “May your smile stay bright and your heart stay full.” 🌸
+  </div>
+
+  <div class="quote">
+    “The world is a little lovelier with you in it.” ♡
+  </div>
+</section>
+
+<footer>
+  Made with <span class="heart">♥</span> and birthday magic.
+</footer>
+
+<script>
+/* Photo preview */
+document.querySelectorAll('input[type="file"]').forEach(input => {
+  input.addEventListener('change', () => {
+    const file = input.files[0];
+    if (!file) return;
+
+    const card = input.closest('.photo-card');
+    const img = card.querySelector('img');
+    const placeholder = card.querySelector('.placeholder');
+
+    img.src = URL.createObjectURL(file);
+    img.style.display = 'block';
+    placeholder.style.display = 'none';
+  });
+});
+
+/* Original synthesized sweet melody */
+const musicButton = document.getElementById('musicButton');
+const musicStatus = document.getElementById('musicStatus');
+
+let audioContext;
+let melodyTimer;
+let playing = false;
+let noteIndex = 0;
+
+const notes = [
+  523.25, 659.25, 783.99, 659.25,
+  587.33, 698.46, 880.00, 698.46,
+  523.25, 659.25, 783.99, 1046.50,
+  880.00, 783.99, 659.25, 587.33
+];
+
+function playNote(frequency) {
+  const oscillator = audioContext.createOscillator();
+  const gain = audioContext.createGain();
+
+  oscillator.type = 'sine';
+  oscillator.frequency.value = frequency;
+
+  gain.gain.setValueAtTime(0.001, audioContext.currentTime);
+  gain.gain.exponentialRampToValueAtTime(
+    0.08, audioContext.currentTime + 0.04
+  );
+  gain.gain.exponentialRampToValueAtTime(
+    0.001, audioContext.currentTime + 0.4
+  );
+
+  oscillator.connect(gain);
+  gain.connect(audioContext.destination);
+
+  oscillator.start();
+  oscillator.stop(audioContext.currentTime + 0.42);
+}
+
+function nextNote() {
+  if (!playing) return;
+  playNote(notes[noteIndex % notes.length]);
+  noteIndex++;
+}
+
+musicButton.addEventListener('click', async () => {
+  if (!audioContext) {
+    audioContext = new (
+      window.AudioContext || window.webkitAudioContext
+    )();
+  }
+
+  if (audioContext.state === 'suspended') {
+    await audioContext.resume();
+  }
+
+  if (playing) {
+    playing = false;
+    clearInterval(melodyTimer);
+    musicButton.textContent = '♫ Play Sweet Melody';
+    musicStatus.textContent = 'Melody paused 💗';
+  } else {
+    playing = true;
+    nextNote();
+    melodyTimer = setInterval(nextNote, 470);
+    musicButton.textContent = 'Ⅱ Pause Melody';
+    musicStatus.textContent = 'A little melody just for you ♡';
+  }
+});
+
+/* Falling hearts and stars */
+function createFallingSymbols() {
+  const symbols = ['♡', '✦', '♥', '✿'];
+
+  for (let i = 0; i < 22; i++) {
+    const item = document.createElement('span');
+
+    item.className = 'fall';
+    item.textContent =
+      symbols[Math.floor(Math.random() * symbols.length)];
+
+    item.style.left = Math.random() * 100 + 'vw';
+    item.style.fontSize = (14 + Math.random() * 12) + 'px';
+    item.style.color = ['#d94f83', '#e9a2bd', '#b99ad9'][i % 3];
+    item.style.animationDuration = (5 + Math.random() * 5) + 's';
+
+    document.body.appendChild(item);
+
+    setTimeout(() => item.remove(), 10500);
+  }
+}
+
+window.addEventListener('load', createFallingSymbols);
+</script>
+
+</body>
+</html>
